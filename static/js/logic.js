@@ -6,7 +6,6 @@ var granimInstance = new Granim({
     isPausedWhenNotInView: true,
     image : {
         source: 'images/bg.png',
-		// source: 'images/aleinbg.jpeg',
 		stretchMode: ['stretch-if-bigger', 'stretch-if-bigger'],
 		position: ['center','bottom'],
         blendingMode: 'multiply'
@@ -66,32 +65,20 @@ L.control.layers(baseLayers).addTo(map);
 
 var AlienIcon = L.icon({
 	iconUrl: 'static/icons/alienOutlineSM.png',
-	//shadowUrl: 'leaf-shadow.png',
 	iconSize:     [25, 25], // size of the icon
-	//shadowSize:   [50, 64], // size of the shadow
-	//iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-	//shadowAnchor: [4, 62],  // the same for the shadow
 	popupAnchor:  [0, -30] // point from which the popup should open relative to the iconAnchor
 });
  
 
 var UfoIcon = L.icon({
 	iconUrl: '../../images/ufoIcon.png',
-	//shadowUrl: 'leaf-shadow.png',
 	iconSize:     [25, 25], // size of the icon
-	//shadowSize:   [50, 64], // size of the shadow
-	//iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-	//shadowAnchor: [4, 62],  // the same for the shadow
 	popupAnchor:  [0, -30] // point from which the popup should open relative to the iconAnchor
 });
 
 var squatchIcon = L.icon({
 	iconUrl: 'static/icons/squatchOutlineSM.png',
-	//shadowUrl: 'leaf-shadow.png',
 	iconSize:     [25, 25], // size of the icon
-	//shadowSize:   [50, 64], // size of the shadow
-	//iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-	//shadowAnchor: [4, 62],  // the same for the shadow
 	popupAnchor:  [0, -30] // point from which the popup should open relative to the iconAnchor
 });
 
@@ -149,9 +136,3 @@ function addMarkers(data, iconVar) {
 	// Add our marker cluster layer to the map
 	map.addLayer(markers);
 };
-
-// FOR PLOTS ========================= //
-// d3.json('Data/json/Bigfoot.json').then(function(data) {
-// 	var states = Object.keys(data).map(data => data.state);
-// 	console.log(states);
-// })
