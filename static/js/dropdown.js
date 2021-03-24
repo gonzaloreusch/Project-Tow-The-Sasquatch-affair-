@@ -7,7 +7,6 @@ var summaryText = d3.select('#summaryText');
 function addToBFDropdown(response) {
 	for (i = 0; i < Object.keys(response).length; i++) {
 		var report = response[i].number;
-		//var loc = `${response[i].state} - ${response[i].date}`
 		var value = Object.keys(response)[i];
 		bigfootDropdown.append('option').text(`Report #${report}`).property('value', value);
 	};
@@ -61,8 +60,6 @@ function onChangeUFO() {
 
 var BFbutton = d3.select('#BFbutton');
 var UFObutton = d3.select('#UFObutton');
-//  bigfootDropdown = d3.select('#bigfoot');
-//  alienDropdown = d3.select('#alien');
 
 BFbutton.on('click', BFtoggle);
 UFObutton.on('click', UFOtoggle);
